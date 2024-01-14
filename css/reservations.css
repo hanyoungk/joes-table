@@ -1,0 +1,363 @@
+@charset "UTF-8";@charset "UTF-8";
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../assets/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+  src: url('../assets/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fontawesome-webfont.woff2') format('woff2'),
+       url('../assets/fontawesome-webfont.woff') format('woff'),
+       url('../assets/fontawesome-webfont.ttf') format('truetype'),
+       url('../assets/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+    /* font-family: 'Galada', sans-serif; */
+    font-family: sans-serif;
+    font-size: 12px;
+    margin-right: 20px;
+    margin-left: 20px;
+    
+}
+
+header{
+    /* margin: 10px; */
+    border-bottom: 1px solid rgb(224, 223, 223);
+    /* padding-bottom: 10px; */
+}
+
+nav{
+    /* background:rgb(156, 99, 99); */
+    border-bottom: 1px solid rgb(224, 223, 223);
+    height: 120px;
+}
+
+.navbar {
+    display: flex;
+    /* height: 120px; */
+    /* background:rgb(156, 99, 99); */
+}
+
+.navbar h1 {
+    /* display:flex; */
+    text-decoration: none;
+    list-style: none;
+    font-size: 50px;
+    /* padding: 10px; */
+    margin: 30px;
+    /* padding-bottom:30px; */
+
+    font-family: 'Galada', sans-serif;
+}
+.navbar h1 a{
+    text-decoration: none;
+    color:rgb(168, 44, 44);
+}
+
+.nav-button {
+	text-decoration: none;
+    color: rgb(156, 156, 156);
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+}
+
+ul {
+    flex: 1;
+    text-align: right;
+    font-size: 12px;
+    /* padding: 30px; */
+    padding-right: 20px;
+    padding-top: 20px;
+    /* margin-top: 40px;
+    margin-right: 40px; */
+    margin: 40px;
+    /* background: beige; */
+}
+ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px;
+}
+ul li a{
+    text-decoration: none;
+    color:  rgb(156, 156, 156);
+    /* padding: 0 5px; */
+    /* position: relative */
+}
+
+.main{
+    margin: 40px;
+    margin-top:30px;
+    /* background: gray; */
+}
+
+.left-col{
+    width: 67%;
+    float: left;
+}
+.right-col{
+    width: 33%;
+    float: right;
+}
+.search-box{
+    padding-bottom: 2px;
+    /* justify-content: space-between; */
+    margin: 10px 0 30px;
+    
+}
+.search-box input{
+    /* display: flex; */
+    /* width: 620px; */
+    float:left;
+    width: 85%;
+    height: 25px;
+    border: 1px solid  rgb(224, 223, 223);
+    border-radius: 3px;
+    /* margin-bottom: 30px; */
+}
+#search-submit{
+	font-family: 'FontAwesome';
+    width: 10%;
+    height: 28px;
+    float: right;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 1px solid rgb(224, 223, 223);
+    color: white;
+    background:rgb(168, 44, 44);
+    border-radius: 3px;
+    cursor:pointer;
+    display: flex;
+	  align-items: center;
+	  justify-content: center;
+}
+
+/* Specify the icon content for the button */
+#search-submit::before {
+  content: '\F002'; 
+ 
+  display: inline-block;  
+  width: 20px; 
+  height: 20px;  
+  margin-top: 5px;  
+ 
+  color: white;  
+}
+
+.coordinates-box{
+    /* width: 40%; */
+    margin-top: 10px;
+    /* height: 25px; */
+    display: flex;
+    padding-bottom: 2px;
+    /* padding-right: 10px; */
+    /* margin: 10px 0 30px; */
+
+}
+.coordinates-box input{
+    border: 1px solid  rgb(224, 223, 223);
+    font-size: 12px;
+    width: 49%;
+    height: 25px;
+    margin-right: 15px;
+    margin-top: 15px;
+    border-radius: 3px;
+}
+
+.sorting-options{
+    /* display: flex; */
+    color: rgb(156, 156, 156);
+    font-size: 12px;
+    /* margin-top: 10px; */
+    /* margin-left: 15px; */
+}
+
+.left-side{
+    /* color:blue; */
+    width: 50%;
+    float: left;
+}
+.right-side{
+    width: 50%;
+    float: right;
+    /* background: rgb(203, 137, 137); */
+}
+
+.main2{
+    /* display:block; */
+    float: right;
+    justify-content: center;
+    width: 32%;
+}
+#google-api-button{
+	font-family: sans-serif, 'FontAwesome';
+    font-size: 12px;
+    width: 95%;
+    height: 25px;
+    margin-top: 9px;
+    padding: 4px;
+    justify-content: center;
+    color: white;
+    background:rgb(13, 142, 255);
+    border: 0;
+    border-radius: 3px;
+    cursor:pointer;
+}
+
+fieldset{
+    border: 0;
+}
+
+/**CITATION**
+// "what should my css be for my google maps modal to pop up in the middle of screen" prompt (35 lines). 
+//	Chat GPT 3.5 version, OpenAI, Nov 10 2023, chat.openai.com/chat */
+#mapModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-sm{
+    max-width: 50% !important;;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#map {
+    width: 600px;
+    height: 400px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;  
+}
+
+.reservations-results {
+    width: 92%;
+    float: left;
+    margin-left: 40px;
+    margin-top: 15px;
+    margin-right: 40px;
+ 
+}
+
+.reservations-results #title {
+    margin-top: 10px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    color:  rgb(156, 156, 156);
+    border-bottom: 1px solid  rgb(224, 223, 223);
+}
+
+.restaurant-item {
+    display: flex;
+    border-bottom: 1px solid rgb(224, 223, 223);
+    padding: 20px;
+}
+
+.restaurant-image {
+    border-radius: 20px;
+    width: 220px; 
+    height: 220px;  
+ 
+    cursor: pointer;
+}
+
+.restaurant-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color:  rgb(156, 156, 156);
+}
+
+.name {
+    margin-top : 10px;
+	color:  rgb(156, 156, 156);
+    font-size: 16px;  
+    margin-bottom: 5px;  
+}
+
+.restaurant-image-link {
+    /*cursor: pointer;*/
+    margin-right: 20px;
+    /*background-color: rgb(135, 201, 254);*/
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;  
+    margin-right: 20px;  
+}
+
+
+.btn {
+  font-family: sans-serif, 'FontAwesome';
+  width: 100px;
+  color: white;
+  padding: 8%;
+  margin-top: 0;
+  padding-top: 13%;
+  padding-bottom: 13%;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(168, 44, 44);
+  border-radius: 3px;
+}
+
+.btn:hover {
+
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-item {
+  display: none;
+  width: 110px;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  overflow: auto;
+  z-index: 1;
+  border: 1px solid  rgb(224, 223, 223);
+}
+
+.dropdown-item a {
+  color: black;
+  font-size: 12px;
+  padding: 6% 8%;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
