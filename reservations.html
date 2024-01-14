@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Galada&family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./css/reservations.css">
+        <script type="module" src="./js/reservations.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="navbar">
+                <h1><li><a href="./home.html">JoesTable!</a></li></h1>
+                <ul id="navbar-links">
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./login.html">Login / Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="main">
+            <form id="searchForm" action="YelpServlet" method="GET" >
+                <div class="left-col"> 
+                    <div class="search-box">
+                        <input id="search-term" type="text" name="search-term" placeholder="Restaurant Name" required>
+
+
+                        <button id="search-submit" type="submit" name="submit" value="Submit">
+
+						</button>
+                    </div>
+                    <div class="coordinates-box">
+                        <input id="latitudeInput" type="long" name="latitudeInput" placeholder="Latitude" required>
+                        <input id="longitudeInput" type="long" name="longitudeInput" placeholder="Longitude" required>
+                    </div>
+
+                </div>
+                <div class="right-col">
+                    <div class="sorting-options">
+                        <fieldset>
+                            <div class="left-side">
+                                <input type="radio" name="sort" value="1" required>Best Match</input>
+                                <br/>
+                                <input type="radio" name="sort" value="2" required>Rating</input>
+                            </div>
+                            <div class="right-side">
+                                <input type="radio" name="sort" value="3" required>Review Count</input>
+                                <br/>
+                                <input type="radio" name="sort" value="4" required>Distance</input>
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+            </form>
+            <div class="main2">
+                <button  onclick="document.getElementById('mapModal').style.display='block'" id="google-api-button">
+                    &#xf041; Google Maps (Drop a pin!)
+                </button>
+                    
+                <div id="mapModal" class="modal">
+                    <div class="modal-content" >
+                        <span class="close" onclick="document.getElementById('mapModal').style.display = 'none'">&times;</span>
+                    <div id="map"></div>
+                    </div>
+                </div>
+    
+                <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+                ({key: "AIzaSyCBqwWglyCi8rEE-zT1ZFD58B__lnR4eWo", v: "weekly"});</script>
+            </div>
+        </div>
+
+        <div class="reservations-results">
+            <div id="title">
+                user's reservations
+				<!--**CITATION**
+				"how can i make a dropdown button and make the options show up when clicked?" prompt (5 lines). 
+				Chat GPT 3.5 version, OpenAI, Nov 28 2023, chat.openai.com/chat -->
+                <div class="dropdown" id="dropdownDiv">
+				    <button onclick="myFunction()" class="btn">Sort By</button>
+				    <div id="myDropdown" class="dropdown-item">
+				      <a href="#" value="mostRecent">Most Recent</a>
+				      <a href="#" value="leastRecent">Least Recent</a>
+				    </div>
+				    
+				    <script>
+					  function myFunction() {
+					    document.getElementById("myDropdown").classList.toggle("show");
+					    console.log("should show content items in dropdown");
+					  }
+					</script>
+				</div>
+            </div>
+            <div id="reservations-list">
+                <div class="restaurant-item">
+				    <a href=href="" class="restaurant-image-link">
+			            <img src="restaurant.imageURL" alt="Restaurant Image" class="restaurant-image">
+			        </a>
+				    <div class="restaurant-details">
+				        <h3 class="name">Restaurant Name</h3>
+				        <p class="address">Restaurant Address</p>
+				        <p class="date">reservation date</p>
+				        <p class="time">reservation time</p>
+				        <p class="notes">reservation note</p>
+				    </div>
+				</div>
+            </div>
+
+            
+        </div>
+    </body>
+</html>

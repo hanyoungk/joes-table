@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html land="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page</title>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Galada&family=Roboto+Condensed&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./css/login.css">
+        <script type="module" src="./js/login.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <div class="navbar">
+                <h1><li><a href="./home.html">JoesTable!</a></li></h1>
+                <ul>
+                    <li><a href="./home.html">Home</a></li>
+                    <li><a href="./login.html">Login / Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="main">
+            <div class="left-col">
+                <form id="loginForm" action="home.html" method="GET">
+                    <h1>Login</h1>
+                    <p>Username</p>
+                    <input id="login-username" type="text" required>
+                    <p>Password</p>
+                    <input id="login-password" type="password" required>
+                    <br>
+                    <button id="signin-submit" type="submit" name="submit" value="Submit">&#xf090; Sign in</button>
+                </form>
+                
+            </div>
+
+            <div class="right-col">
+                <form id="signupForm" action="home.html" method="GET">
+                    <h1>Sign Up</h1>
+                    <p>Email</p>
+                    <input id="signup-email" type="text" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}">
+
+                    <p>Username</p>
+                    <input id="signup-username" type="text" required>
+
+                    <p>Password</p>
+                    <input id="signup-password" type="password" required>
+
+                    <p>Confirm Password</p>
+                    <input id="signup-password-confirm" type="password" required>
+                    <br>
+
+                    <input type="checkbox" id="terms" name="terms" required>
+                    I have read and agree to all terms and conditions of JoesTable
+                    
+                    <br>
+                    <button id="signup-submit" type="submit" name="submit" value="Submit">&#xf234; Create Account</button>
+                </form>
+                
+            </div>
+        </div>
+        
+
+
+
+    </body>
+</html>
